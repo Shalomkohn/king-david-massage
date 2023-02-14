@@ -39,6 +39,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <!-- <li>
               <a href="#" class="icon solid fa-angle-down">Layouts</a>
               <ul>
@@ -56,7 +57,7 @@
                 </li>
               </ul>
             </li> -->
-            <li><a href="book.html">Book</a></li>
+            <li><a href="book.html" class="button">Book</a></li>
             <li><a href="#" class="button">Call Us</a></li>
           </ul>
         </nav>
@@ -64,6 +65,13 @@
 
       <!-- Banner -->
       <section id="banner">
+        <a href="https://wa.me/7867313347"
+          ><img
+            class="whatsapp-icon"
+            src="./images/whatsapp.png"
+            alt="whatsapp icon"
+            width="70"
+        /></a>
         <h2>King David Massage</h2>
         <p>Indulge in a luxurious massage in the comfort of your own space.</p>
         <ul class="actions special">
@@ -77,6 +85,7 @@
           loop
           autoplay
           muted
+          playsinline
         ></video>
         <div class="overlay"></div>
       </section>
@@ -86,17 +95,42 @@
         <section class="box special features">
           <div class="features-row">
             <section>
-              <span class="icon regular major fa-calendar accent2"></span>
+              <!-- <span class="icon regular major fa-calendar accent2"></span> -->
+              <img
+                width="110"
+                src="./images/calander.png"
+                class="attachment-thumbnail size-thumbnail"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
               <h3>Book online or give us a call.</h3>
             </section>
             <section>
-              <span class="icon solid major fa-spa accent3"></span>
+              <!-- <span class="icon solid major fa-spa accent3"></span> -->
+              <img
+                width="128"
+                height="128"
+                src="./images/massage-icon.png"
+                class="attachment-thumbnail size-thumbnail"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
               <h3>Enjoy a professional massage in the comfort of your home.</h3>
             </section>
           </div>
           <div class="features-row features-row-2">
             <section>
-              <span class="icon solid major fa-sun accent4"></span>
+              <!-- <span class="icon solid major fa-sun accent4"></span> -->
+              <img
+                width="110"
+                src="./images/feel-good.png"
+                class="attachment-thumbnail size-thumbnail"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
               <h3>Feel rejuvenated and refreshed.</h3>
             </section>
             <!-- <section>
@@ -116,12 +150,30 @@
             </h2>
           </header>
 
-          <span class="image featured"
-            ><img src="images/services-image-1.0.png" alt=""
-          /></span>
           <!-- <span class="image featured"
-            ><img src="images/pic01.jpg" alt=""
-			/></span> -->
+            ><img
+              src="images/services-image-1.0.png"
+              alt="people getting massages"
+          /></span> -->
+          <span class="image featured">
+            <div id="services-slider" class="services-slider">
+              <div class="services-slides">
+                <img
+                  src="images/acupressure-massage-slider.png"
+                  alt="people getting massages"
+                /><img
+                  src="images/swedish-massage-slider.png"
+                  alt="people getting massages"
+                /><img
+                  src="images/shiatsu-massage-slider.png"
+                  alt="people getting massages"
+                /><img
+                  src="images/deep-tissue-massage-slider.png"
+                  alt="people getting massages"
+                />
+              </div>
+            </div>
+          </span>
           <a href="#" class="button">Explore our services</a>
         </section>
 
@@ -129,7 +181,7 @@
           <div class="col-4 col-12-narrower">
             <section class="box special price-box">
               <span class="image featured"
-                ><img src="images/60-minutes-1.2.png" alt=""
+                ><img src="images/60-minutes-1.2.png" alt="60 minute massage"
               /></span>
               <h4>
                 Unwind and relax with our 60-minute massage, the perfect way to
@@ -146,7 +198,7 @@
           <div class="col-4 col-12-narrower">
             <section class="box special price-box">
               <span class="image featured"
-                ><img src="images/75-minutes-1.1.png" alt=""
+                ><img src="images/75-minutes-1.1.png" alt="75 minute massage"
               /></span>
               <h4>
                 Treat yourself to a little extra luxury with our 75-minute
@@ -162,7 +214,7 @@
           <div class="col-4 col-12-narrower">
             <section class="box special price-box">
               <span class="image featured"
-                ><img src="images/90-minutes-1.0.png" alt=""
+                ><img src="images/90-minutes-1.0.png" alt="90 minute massage"
               /></span>
               <h4>
                 For the ultimate spa experience, try our 90-minute massage. Our
@@ -179,8 +231,11 @@
 
         <!-- Reviews -->
         <section id="reviews" class="Reviews-section">
+          <header class="major">
+            <h2>Client Testimonials</h2>
+          </header>
           <div class="arrows"></div>
-          <div class="slides">
+          <div class="reviews-slides">
             <div class="review-1">
               <div class="stars">
                 <i class="icon solid fa-star"></i>
@@ -624,7 +679,7 @@
     <!-- Added the script here because i can't figure out how to get it to work otherwise-->
     <script type="text/javascript">
       $(document).ready(function () {
-        $(".slides").slick({
+        $(".reviews-slides").slick({
           infinite: true,
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -640,6 +695,17 @@
           nextArrow: '<a href="#" class="icon solid fa-angle-right"></a>',
           prevArrow: '<a href="#" class="icon solid fa-angle-left"></a>',
           appendArrows: ".arrows",
+        });
+
+        $(".services-slides").slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          speed: 6000,
+          autoplay: true,
+          autoplaySpeed: 0,
+          cssEase: "linear",
+          arrows: false,
         });
       });
     </script>

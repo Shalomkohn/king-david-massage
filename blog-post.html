@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>About - King David Massage</title>
+    <title>Post - King David Massage</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -24,7 +24,7 @@
     <meta name="author" content="King David Massage" />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
-  <body class="is-preload">
+  <body class="is-preload" onload="getPost()">
     <div id="page-wrapper" class="page-wrapper">
       <!-- Header -->
       <header id="header">
@@ -34,6 +34,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="book.html">Book</a></li>
             <li><a href="#" class="button">Call Us</a></li>
           </ul>
@@ -41,48 +42,11 @@
       </header>
 
       <!-- Main -->
-      <section id="main" class="container medium about">
-        <header>
-          <h2>King David Massage</h2>
-          <p>Enhancing Your Health and Happiness</p>
-        </header>
-        <div class="box">
-          <h3>Our Tale</h3>
-          <p>
-            Our tale began with a simple yet powerful goal - to bring the
-            healing benefits of massage therapy to people in the comfort of
-            their own space. We believe that everyone deserves to feel relaxed,
-            rejuvenated and refreshed, without having to leave the familiarity
-            of their surroundings.
-          </p>
-          <p>
-            With a team of highly skilled and experienced therapists, we bring
-            the spa experience to you.
-          </p>
-          <h3>Out Commitment</h3>
-          <p>
-            Our commitment is to provide the highest quality massage therapy
-            services in the Miami Beach area. Our therapists are dedicated to
-            creating a unique and personalized experience for each client, and
-            we strive to help you reach a state of total relaxation and
-            well-being. Whether you're looking to unwind after a long day,
-            recover from an injury or manage stress, we're here to help you feel
-            your best. We believe that everyone deserves a little pampering, and
-            we're passionate about making that happen.
-          </p>
-          <p>
-            We're thrilled to offer our clients the ability to book appointments
-            easily and conveniently, and our therapists are always ready to
-            bring their expertise to you. Whether you're in your own home, a
-            hotel room, or anywhere else in Miami, we're here to make sure that
-            you feel amazing.
-          </p>
-          <p>
-            So why wait? Book your appointment today and experience the blissful
-            benefits of a professional massage.
-          </p>
-          <a href="#" class="button">Book Session</a>
-        </div>
+      <section id="main" class="container medium single-post-page">
+        <a class="button alt" href="/blog.html"
+          ><i class="icon solid fa-arrow-left"></i>Back to posts</a
+        >
+        <div class="box post" id="post"></div>
       </section>
 
       <!-- Footer -->
@@ -177,5 +141,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/blog.js"></script>
   </body>
 </html>
