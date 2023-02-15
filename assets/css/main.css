@@ -3181,8 +3181,6 @@
 
 	#banner {
 		background-attachment: scroll,							fixed;
-		/* background-color: #666; */
-		/* background-image: url("images/overlay.png"), url("../../images/banner.jpg"); */
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
@@ -3210,16 +3208,20 @@
 			object-fit: cover;
 		}
 
-		#banner :last-child {
-			margin-bottom: 0;
+		#banner video::-webkit-media-controls {
+			display: none !important;
+		}
+		
+		#banner video::-webkit-media-controls-enclosure {
+			display: none !important;
+		}
+		
+		#banner video::-webkit-playsinline {
+			display: none !important;
 		}
 
-		#banner .whatsapp-icon {
-			position: fixed;
-			bottom: 0;
-			right: 0;
-			z-index: 1;
-			padding: 0 15px 15px 0;
+		#banner :last-child {
+			margin-bottom: 0;
 		}
 
 		#banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
@@ -3294,6 +3296,10 @@
 			margin: 0 0 3em 0;
 		}
 
+			#main > header h1 a .logo {
+				margin-top: 0px;
+			}
+
 			#main > header h2 {
 				font-size: 2.75em;
 				margin: 0;
@@ -3313,10 +3319,19 @@
 	}
 /* Services */
 
+	.services .button{
+		letter-spacing: .8px;
+	}
+
 
 /* Prices */
 	.price-box h4 {
 		min-height: 266px;
+		padding-bottom: 10px;
+	}
+
+	.price-box p span {
+		font-size: 20px;
 	}
 
 /* Footer */
@@ -3327,12 +3342,33 @@
 		text-align: center;
 	}
 
+		#footer .sticky-buttons {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			padding: 0 15px 15px;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100vw;
+		}
+			#footer .sticky-buttons a{
+				border-bottom: none;
+			}
+
+			#footer .sticky-buttons .book{
+				box-shadow: inset -.5px -.5px 0 2px #646464;
+				display: none;
+			}
+
 		#footer .top {
 			text-align: start;
 			padding: 4em;
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-between;
+			justify-content: space-around;
 			max-width: 1500px;
 			margin: auto;
 		}
@@ -3341,12 +3377,12 @@
 				padding: 2em;
 			}
 
-		#footer ul {
+		#footer .useful-links ul {
 			list-style: none;
 			padding: 0;
 		}
 
-			#footer ul li {
+			#footer .useful-links ul li {
 				padding: 0;
 			}
 
@@ -3375,7 +3411,7 @@
 			color: #999;
 			font-size: 0.9em;
 			line-height: 1em;
-			margin: 2em 0 0 0;
+			margin: 2em 0;
 			padding: 0;
 			text-align: center;
 		}
@@ -3471,48 +3507,12 @@
 				margin: auto;
 			}
 
-			/* from template  https://codepen.io/frogmcw/pen/deqRwa*/
-			  /* h2 {
-				margin: 20px auto 80px;
-				font-size: 38px;
-				font-weight: 300;
-				text-align: center;
-				letter-spacing: 2px;
-				line-height: 1.5;
-			  } */
-			  
-			  /* details {
-				width: 75%;
-				min-height: 5px;
-				max-width: 700px;
-				padding: 45px 70px 45px 45px;
-				margin: 0 auto;
-				position: relative;
-				font-size: 22px;
-				border: 1px solid rgba(0,0,0,.1);
-				border-radius: 15px;
-				box-sizing: border-box;
-				transition: all .3s;
-			  } */
-			  
-			  /* details + details {
-				margin-top: 20px;
-			  } */
+			/* from template faq  https://codepen.io/frogmcw/pen/deqRwa*/
+
 			  details {
 				border-bottom: 1px solid #aaa;
 
 			  }
-			  /* details[open] {
-				min-height: 100px;
-				background-color: #f6f7f8;
-				box-shadow: 2px 2px 20px rgba(0,0,0,.2);
-
-			  } */
-			  
-			  /* details p {
-				color: #96999d;
-				font-weight: 300;
-			  } */
 			  
 			  summary {
 				display: flex;
@@ -3522,11 +3522,7 @@
 				cursor: pointer;
 				padding: 10px 0;
 			  }
-			  
-			  /* summary:focus {
-				outline: none;
-				
-			  } */
+
 			  
 			  summary:focus::after {
 				content: "";
@@ -3723,11 +3719,6 @@
 
 			body, input, select, textarea {
 				font-size: 11pt;
-			}
-
-		/* Footer */
-			#footer .map {
-				display: none;
 			}
 	}
 
@@ -3968,6 +3959,11 @@
 				min-height: unset;
 			}
 
+		/* Sticky Buttons */
+
+		#footer .sticky-buttons .book{
+			display: block;
+		}
 	}
 
 /* Mobile */
@@ -4240,5 +4236,16 @@
 					#reviews .reviews-slides .slick-slide {
 						padding: 0;
 					}
+
+		/* Footer */
+
+		#footer .top {
+			justify-content: start;
+		}
+
+
+		#footer .map iframe{
+			width: 100%;
+		}
 
 	}
