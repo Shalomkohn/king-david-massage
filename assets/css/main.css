@@ -3351,17 +3351,28 @@
 			color: #fff;
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: left;
 			width: 100vw;
 		}
 			#footer .sticky-buttons a{
 				border-bottom: none;
 			}
 
-			#footer .sticky-buttons .book{
-				box-shadow: inset -.5px -.5px 0 2px #646464;
-				display: none;
+			#footer .sticky-buttons a .whatsapp-icon {
+				padding-top: 7px;
 			}
+
+			#footer .sticky-buttons a.call-us,
+			#footer .sticky-buttons a.book-now{
+				background-color: #ffffff66;
+				box-shadow: inset -.3px -.3px 0 1px #646464;
+				display: none;
+				padding: 0 13px;
+			}
+
+		#footer .sticky-buttons a.call-us {
+			margin: 0 5px 0 2px;
+		}
 
 		#footer .top {
 			text-align: start;
@@ -3961,7 +3972,8 @@
 
 		/* Sticky Buttons */
 
-		#footer .sticky-buttons .book{
+		#footer .sticky-buttons a.call-us,
+			#footer .sticky-buttons a.book-now{
 			display: block;
 		}
 	}

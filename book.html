@@ -33,6 +33,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="book.html" class="button">Book</a></li>
             <li><a href="tel:+17867313347" class="button">Call Us</a></li>
           </ul>
@@ -50,7 +51,7 @@
           <ul>
             <li>Sunday - Thursday: 8am - 11pm</li>
             <li>Friday: 8am - 6pm</li>
-            <li>Saturday: 7pm -12pm</li>
+            <li><b>Saturday: 7pm -12pm</b></li>
           </ul>
         </div>
         <div class="box">
@@ -118,8 +119,8 @@
                     <option value="9:00 PM">9:00 PM</option>
                     <option value="9:30 PM">9:30 PM</option>
                     <option value="10:00 PM">10:00 PM</option>
-                    <option value="10:30 PM">10:30 PM (only saturday)</option>
-                    <option value="11:00 PM">11:00 PM (only saturday)</option>
+                    <option value="10:30 PM">10:30 PM</option>
+                    <option value="11:00 PM">11:00 PM</option>
                   </select>
                   <input type="hidden" id="selected-time" name="time" />
                   <input
@@ -223,12 +224,15 @@
                 />
               </div>
               <div class="col-12">
+                <label for="address"
+                  >We are a mobile massage - we come to you.</label
+                >
                 <input
                   type="text"
                   name="address"
                   id="address"
                   value=""
-                  placeholder="Address"
+                  placeholder="Your Address"
                   required
                 />
               </div>
@@ -252,6 +256,19 @@
 
       <!-- Footer -->
       <footer id="footer">
+        <div class="sticky-buttons">
+          <a href="https://wa.me/+17867313347"
+            ><img
+              class="whatsapp-icon"
+              src="./images/whatsapp.png"
+              alt="whatsapp icon"
+              width="45"
+          /></a>
+          <a href="tel:+17867313347" class="button alt small call-us"
+            >Call Us</a
+          >
+          <a href="book.html" class="button alt small book-now">Book Now</a>
+        </div>
         <div class="top">
           <div class="hours">
             <h3>Hours of operation</h3>
