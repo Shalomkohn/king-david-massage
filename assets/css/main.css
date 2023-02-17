@@ -3350,16 +3350,29 @@
 			padding: 0 15px 15px;
 			color: #fff;
 			display: flex;
-			align-items: center;
-			justify-content: left;
+			align-items: bottom;
+			justify-content: space-between;
 			width: 100vw;
 		}
 			#footer .sticky-buttons a{
 				border-bottom: none;
+				display: flex;
+				align-items: end;
 			}
 
 			#footer .sticky-buttons a .whatsapp-icon {
 				padding-top: 7px;
+				
+			}
+
+			#footer .sticky-buttons .contact a {
+				display: flex;
+				flex-direction: column;
+				align-self: stretch;
+			}
+
+			#footer .sticky-buttons .contact a.call-us {
+				margin-bottom: 5px;
 			}
 
 			#footer .sticky-buttons a.call-us,
@@ -3369,10 +3382,6 @@
 				display: none;
 				padding: 0 13px;
 			}
-
-		#footer .sticky-buttons a.call-us {
-			margin: 0 5px 0 2px;
-		}
 
 		#footer .top {
 			text-align: start;
@@ -3500,6 +3509,23 @@
 			max-width: 100%;
 			width: 25em;
 		}
+/* Map */
+
+		#map {
+			max-width: 880px;
+			margin: auto;
+		}
+
+			#map .map {
+				padding: 0;
+				overflow: hidden;
+				background-color: transparent;
+			}
+
+				#map .map iframe{
+					width: 100% !important;
+					margin: auto;
+				}
 
 /*  Faq */
 		
